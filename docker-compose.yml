@@ -1,0 +1,26 @@
+# /docker-compose.yml
+version: '3.0'
+services:
+    backend:
+        build: ./backend
+        ports:
+            - '8000:8000'
+        stdin_open: true
+        tty: true
+
+        # volumes:
+        # - ./backend
+        command: ['python', 'main.py']
+
+
+    frontend:
+        build: ./frontend
+        ports: 
+            - '3000:3000'
+        stdin_open: true
+        tty: true
+        # volumes:
+        #     - ./frontend
+        command: ['npm', 'start']
+# database:
+#     image: postgres
