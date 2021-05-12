@@ -14,7 +14,7 @@ services:
 
 
     frontend:
-        build: ./frontend
+        build: ./backend/frontend
         ports: 
             - '3000:3000'
         stdin_open: true
